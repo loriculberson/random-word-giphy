@@ -1,4 +1,3 @@
-
 let randomWords = ['cat', 'dog', 'turtle', 'pig', 'mouse'];
 let randomWordCount = randomWords.length;
 
@@ -7,14 +6,15 @@ const getRandomInt = (randomWordCount) => {
 }
 
 const getRandomWord = () => {
-  const val = getRandomInt(randomWords.length);
+  const val = getRandomInt(randomWordCount);
   console.log(val, randomWords[val]);
   return randomWords[val];
 }
 
-
 const setup = () => {
   const word = getRandomWord();
+  //make http request from front end to backend
+  
   console.log(word);
 }
 
