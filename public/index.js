@@ -19,7 +19,14 @@ const setup = () => {
   
   fetch(graphicUrl)
     .then((res) => res.text())
-    .then((image) => console.log(image))
+    .then((imageUrl) => displayImage(imageUrl))
+}
+
+const displayImage = (imageUrl) => {
+  const giphyDiv = document.querySelector('.giphy')
+  const giphy = document.createElement("img");
+  giphy.setAttribute('src', imageUrl);
+  giphyDiv.appendChild(giphy);
 }
 
 const submitButton = document.querySelector('.word-giphy');
