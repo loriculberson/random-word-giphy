@@ -1,4 +1,10 @@
-let randomWords = ['cat', 'dog', 'turtle', 'pig', 'mouse'];
+let randomWords = [
+  'cat', 'dog', 'turtle', 
+  'pig', 'mouse', 'horse', 'cow', 
+  'porcupine', 'dolphin', 'swordfish', 
+  'skunk', 'rose', 'pool', 'chicken'
+
+];
 let randomWordCount = randomWords.length;
 
 const getRandomInt = (randomWordCount) => {
@@ -19,14 +25,23 @@ const setup = () => {
   
   fetch(graphicUrl)
     .then((res) => res.text())
-    .then((imageUrl) => displayImage(imageUrl))
+    .then((imageUrl) => {
+      displayImage(imageUrl);
+      displayWord(word);
+    })
 }
 
 const displayImage = (imageUrl) => {
-  const giphyDiv = document.querySelector('.giphy')
+  const giphyDiv = document.querySelector('.giphy');
   const giphy = document.createElement("img");
   giphy.setAttribute('src', imageUrl);
   giphyDiv.appendChild(giphy);
+}
+
+const displayWord = (word) => {
+  const wordDiv = document.querySelector('.word');
+  const content = document.createTextNode(word);
+  wordDiv.appendChild(content);
 }
 
 const submitButton = document.querySelector('.word-giphy');
