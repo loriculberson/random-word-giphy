@@ -14,8 +14,12 @@ const getRandomWord = () => {
 const setup = () => {
   const word = getRandomWord();
   //make http request from front end to backend
+  // tell backend what word has been selected
+  const graphicUrl = `/get-graphic?word=${word}`;
   
-  console.log(word);
+  fetch(graphicUrl)
+    .then((res) => res.text())
+    .then((image) => console.log(image))
 }
 
 const submitButton = document.querySelector('.word-giphy');

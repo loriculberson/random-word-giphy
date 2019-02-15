@@ -8,21 +8,18 @@ const giphyAPI = `http://api.giphy.com/v1/gifs/search?api_key=${giphyAPIKey}&lim
 
 app.use(express.static('public'));
 
-// app.get('/', (request, response) => {
-//   console.log('params:', request.params);
-//   const word = '???';
-//   res.send(`You called pic route with a word = ${word}`);
-// });
-
 app.get('/get-graphic', (req, res) => {
   if (req.query.word) {
     const graphicUrl = giphyAPI + req.query.word
-    console.log(`grphic, ${graphicUrl}`)
+    // console.log(`grphic, ${graphicUrl}`)
     fetch(graphicUrl)
       .then((res) => res.json())
       .then((json) => json.data[0].images.fixed_height.url)
       .then((imageUrl) => res.send(imageUrl))
-      .catch((err) => console.error(err))
+      .catch((err) => { 
+        console.error(err)
+        res.status(500).send('Data not available')
+      })
   }
 })
 
