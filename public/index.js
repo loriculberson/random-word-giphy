@@ -3,8 +3,8 @@ let randomWords = [
   'pig', 'mouse', 'horse', 'cow', 
   'porcupine', 'dolphin', 'swordfish', 
   'skunk', 'rose', 'pool', 'chicken'
-
 ];
+
 let randomWordCount = randomWords.length;
 
 const getRandomInt = (randomWordCount) => {
