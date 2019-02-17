@@ -2,7 +2,7 @@
   "name": "random-word-giphy",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Lori Culberson <lori_culberson@homedepot.com>",
+  "author": "Lori Culberson",
   "license": "MIT",
   "scripts": {
     "start": "nodemon app.js"
