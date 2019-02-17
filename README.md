@@ -12,4 +12,7 @@ Learn promises by building app that fetches an image when given a random word
 **Skills:**
 - JavaScript Promises
 
+**Resource:**
+- Built from tutorial by Daniel Shiffman. [YouTube video](https://www.youtube.com/watch?v=QO4NXhWo_NM&list=PLRqwX-V7Uu6bKLPQvPRNNE65kBL62mVfx&index=1)
+
 
